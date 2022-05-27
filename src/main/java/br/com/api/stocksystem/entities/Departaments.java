@@ -1,6 +1,5 @@
 package br.com.api.stocksystem.entities;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -26,7 +25,7 @@ public class Departaments {
 	private String name;
 	
 	@OneToMany(mappedBy = "departaments", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<Products> products = new ArrayList<>();
+	private List<Products> products;
 	
 	public Departaments() {
 	}
